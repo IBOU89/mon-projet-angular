@@ -6,12 +6,15 @@
         Mes appareils
       </a>
       <a href="#" class="list-group-item list-group-item-action">
-        <app-appareil [appareilName]="appareilOne" [appareilStaus]="'eteint'"></app-appareil></a>
-      <a href="#" class="list-group-item list-group-item-action">
-        <app-appareil [appareilName]="appareilTwo" [appareilStaus]="'allumé'"></app-appareil>
-      </a>
-      <a href="#" class="list-group-item list-group-item-action">
-        <app-appareil [appareilName]="appareilTree" [appareilStaus]="'allumé'"></app-appareil></a>
+        <app-appareil *ngFor="let appareil of appareils"
+                      [appareilName]="appareil.name"
+                      [appareilStaus]="appareil.status"></app-appareil></a>
+
+<!--      <a href="#" class="list-group-item list-group-item-action">-->
+<!--        <app-appareil [appareilName]="appareilTwo" [appareilStaus]="'allumé'"></app-appareil>-->
+<!--      </a>-->
+<!--      <a href="#" class="list-group-item list-group-item-action">-->
+<!--        <app-appareil [appareilName]="appareilTree" [appareilStaus]="'eteint'"></app-appareil></a>-->
     </div>
 
       <button class="btn btn-success"

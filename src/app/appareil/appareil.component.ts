@@ -16,4 +16,15 @@ export class AppareilComponent implements OnInit {
     return this.appareilStaus;
   }
 
+
+  // @ts-ignore
+  getColor = () => {
+    if (this.appareilStaus==='allumer'){
+      return'green';
+
+    }else if (this.appareilStaus==='eteint'){
+      return 'red';
+    }
+  };
+
 }

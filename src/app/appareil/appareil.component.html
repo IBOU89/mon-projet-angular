@@ -1,4 +1,14 @@
-<div class="list-group">
-<h4>Appareil : {{appareilName}}------------------Status: {{getStatus()}}</h4>
+<div [ngClass]="{'list-group-item': true,
+          'list-group-item-success': appareilStaus==='allumer',
+          'list-group-item-danger': appareilStaus==='eteint'}">
+
+  <div style="width: 20px; height: 20px;background-color: red"
+  *ngIf="appareilStaus==='eteint'">
+
+  </div>
+
+
+
+<h4 [ngStyle]="{color: getColor()}">Appareil : {{appareilName}}------------------Status: {{getStatus()}}</h4>
   <input [(ngModel)]="appareilName" class="form-control" type="text">
 </div>

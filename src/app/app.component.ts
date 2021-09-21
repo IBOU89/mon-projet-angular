@@ -7,10 +7,36 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isAuth = false;
-  appareilOne= 'Machien à laver';
-  appareilTwo= 'Ordianteur';
-  appareilTree= 'Television'
-  "strictPropertyInitialization": false
+
+
+  appareils =[
+    {
+      name: 'Machien à laver',
+      status: 'eteint'
+
+    },
+
+    {
+      name: 'Televiseur',
+      status: 'eteint'
+
+    },
+
+    {
+      name:'Machien à laver',
+      status: 'allumer'
+
+    },
+  ];
+
+
+
+
+// /*
+//   appareilOne= 'Machien à laver';
+//   appareilTwo= 'Ordianteur';
+//   appareilTree= 'Television'
+//   "strictPropertyInitialization": false*/
 
   constructor() {
     setTimeout(
